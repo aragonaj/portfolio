@@ -1029,51 +1029,67 @@ html {
 
     /* scroll horizontal de lenguajes y frameworks */
     .section-projects .skills-scroll {
-        padding: 1rem .5rem;
+        padding: 1rem 0.5rem;
+
+        display: block;
 
         overflow-x: auto;
         overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
+
+        white-space: nowrap;
     }
 
     .skills-scroll-list {
-        padding: 1rem 0 1rem 0;
+        padding: 0;
+        margin: 0;
 
         width: max-content;
+        min-width: 100%;
 
         display: flex;
         flex-direction: row;
         gap: 1rem;
 
-        overflow-x: auto;
-        overflow-y: hidden;
         scroll-snap-type: x mandatory;
+        scroll-padding-left: 1rem;
         scroll-behavior: smooth;
-        scroll-padding: 0 1rem;
     }
 
     .skills-scroll-item {
-        padding: .5rem;
-        height: auto;
-        width: auto;
+        padding: 0.5rem;
+
+        height: 3rem;
+        width: 10rem !important;
 
         flex: 0 0 auto;
 
-        text-align: center;
-
         scroll-snap-align: start;
+        width: 80px;
     }
 
     .image-wrapper {
-        height: auto;
-        width: 2rem;
+        padding: 0.25rem 1rem;
+
+        width: 20%;
+
+        display: flex;
+        justify-content: center;
+
+        border-radius: 6px 0 0 6px;
+
+        background-color: var(--backgroundColor);
+    }
+
+    .skills-scroll-name {
+        font-weight: 700;
+        color: var(--backgroundColor);
     }
 
     .skills-scroll-logo {
-        height: 2rem;
-        width: 2rem;
+        height: 2.75rem;
+        width: 2.75rem;
     }
-
+    
     /* scroll horizontal de proyectos */
     .projects-list {
         height: 35rem;
