@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'Lora';
-    src: url(fonts/Lora/Lora-SemiBold.ttf);
+    src: url(fonts/Lora-SemiBold.ttf);
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+    src: url(fonts/Raleway-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Merriweather';
-    src: url(fonts/Merriweather/static/Merriweather_120pt-Regular.ttf);
+    src: url(fonts/Merriweather_120pt-Regular.ttf);
     font-weight: 400;
 }
 
