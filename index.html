@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="A.J.ARAGON">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Andrés J. Aragón. Ténico superior en Desarrollo de Aplicaciones Web. Angular. Laravel. .NET" />
+
+    <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    <!-- https://www.youtube.com/watch?v=MxpDrULwejY&ab_channel=MATTHEWDAVID-->
+    <header class="site-header">
+        <div class="profile">
+            <div class="profile__name">
+                <h1 class="profile__title">A. J.<br>ARAGÓN</h1>
+                <h1 class="profile-title-sm">A. J. ARAGÓN</h1>
+            </div>
+            <hr class="divider--general">
+            <div class="profile__degree">
+                <h2 class="profile__description">Técnico Superior en <br>Desarrollo de Aplicaciones Web</h2>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <div class="navigation__item">
+                <span class="navigation__number">01</span>
+                <a class="navigation__link" href="#section-profile">Sobre mí</a>
+            </div>
+            <div class="navigation__item">
+                <span class="navigation__number">02</span>
+                <a class="navigation__link" href="#section-projects">Proyectos</a>
+            </div>
+            <div class="navigation__item">
+                <span class="navigation__number">03</span>
+                <a class="navigation__link" href="#section-contact">Contacto</a>
+            </div>
+        </nav>
+
+        <div class="social-media">
+            <hr class="divider__lateral">
+
+            <!--linkedIn -->
+            <a class="link linkedin-link" href="https://www.linkedin.com/in/ajaragon/">
+                <img class="social-media__icon social-media__icon-linkedin" src="assets/images/icons/linkedin.svg"
+                    alt="Imagen del logo de LinkedIn" height="2.75rem" width="2.75rem">
+            </a>
+
+            <hr class="divider__middle">
+
+            <!-- Github -->
+            <a class="link github-link" href="https://github.com/aragonaj">
+                <img class="social-media__icon social-media__icon-github" src="assets/images/icons/github.svg"
+                    alt="Imagen del logo de GitHub" height="2.75rem" width="2.75rem">
+            </a>
+
+            <hr class="divider__lateral">
+        </div>
+        <!-- vista de las pantallas pequeñas -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-toggle-label">
+            <img class="icon icon-ham-menu" src="assets/images/icons/bars-solid.svg" alt="Icono menú hamburguesa"
+                height="30px" width="30px">
+        </label>
+        <aside class="aside aside-menu">
+            <label for="menu-toggle" class="aside-menu-close-label">
+                <img class="icon icon-x" src="assets/images/icons/square-xmark-solid.svg" alt="Cerrar menú"
+                    height="30px" width="30px">
+            </label>
+            <nav class="nav site-user-nav">
+                <div class="navigation__item">
+                    <span class="navigation__number">01</span>
+                    <a class="navigation__link" href="#section-profile">Sobre mí</a>
+                </div>
+                <div class="navigation__item">
+                    <span class="navigation__number">02</span>
+                    <a class="navigation__link" href="#section-projects">Proyectos</a>
+                </div>
+                <div class="navigation__item">
+                    <span class="navigation__number">03</span>
+                    <a class="navigation__link" href="#section-contact">Contacto</a>
+                </div>
+            </nav>
+        </aside>
+        <!-- fin de la vista pantallas pequeñas -->
+    </header>
+    <main class="main"> <!-- site-main -->
+        <section class="section section-profile" id="section-profile" data-section="section-profile">
+            <!-- section profile-section -->
+            <div class="profile-image-wrapper"> <!-- profile-section__image-container -->
+                <div class="image-container"> <!-- profile-section__image-background -->
+                    <img class="image-profile" alt="Se muestra una foto de perfil" src="assets/images/icons/ajIcon.png"
+                        height="14rem" width="14rem"> <!-- profile-section__image -->
+                </div>
+            </div>
+            <div class="profile-description"> <!-- profile-section__content -->
+                <h3 class="profile-title"> <!-- profile-section__title -->
+                    Hola, soy Andrés. Desarrollador de Aplicaciones Web
+                </h3>
+                <p class="profile-text profile-text-1"> <!-- profile-section__text profile-section__text--1 -->
+                    Soy una persona curiosa, responsable y muy prudente;
+                    con actitud abierta y gran capacidad de aprendizaje y adaptación a nuevos contextos.
+                    Tengo muchas ganas de aprender y de mejorar tanto personal como profesionalmente.
+                </p>
+                <p class="profile-text profile-text-2"> <!-- profile-section__text profile-section__text--2 -->
+                    En mis ratos libres me gusta diseñar y desarrollar sitios web,
+                    indagar cómo otros desarrolladores se las han ingeniado en sus proyectos
+                    y profundizar más en el mundo de la programación.
+                </p>
+                <!-- Fuente: https://enjeck.com/btns/ -->
+                <a class="button button--swipe-left button--purple" href="assets/documents/curriculum_vitae.pdf"
+                    download><span>Descargar CV</span></a>
+            </div>
+        </section>
+        <!-- https://brittanychiang.com/ -->
+        <section class="section section-projects" id="section-projects" data-section="section-project">
+            <!-- section project-section section-projects -->
+            <div class="section-title-wrapper"> <!-- section-title__container -->
+                <h3 class="section-title">HABILIDADES Y PROYECTOS</h3> <!-- section-title -->
+            </div>
+            <div class="skills-scroll"> <!-- skills-scroll -->
+                <img class="icon icon-chevron-down" alt="Imagen de chevron hacia abajo" 
+                    src="assets/images/icons/chevron-down.svg" height="2rem" width="2rem">
+                <!-- icon chevron-down__icon -->
+                <ul class="skills-scroll-list"> <!-- skills-scroll__list -->
+                    <li class="skills-scroll-item first-skill"> <!-- skills-scroll__item first-skill -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-docker" alt="" src="assets/images/icons/docker.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--docker -->
+                        </div>
+                        <p class="skills-scroll-name">Docker</p> <!-- skills-scroll__name -->
+                    </li>
+                    
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-angular" alt="" src="assets/images/icons/angular.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--angular -->
+                        </div>
+                        <p class="skills-scroll-name">Angular</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item item-bootstrap" id="bootstrap-skill">
+                        <!-- skills-scroll__item skills-scroll__item--bootstrap -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-bootstrap" alt="" src="assets/images/icons/bootstrap.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--bootstrap -->
+                        </div>
+                        <p class="skills-scroll-name">Bootstrap</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-eclipse" alt="" src="assets/images/icons/eclipse.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--eclipse -->
+                        </div>
+                        <p class="skills-scroll-name">Eclipse</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-jquery" alt="" src="assets/images/icons/jquery.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--jquery -->
+                        </div>
+                        <p class="skills-scroll-name">JQuery</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item item-laravel" id="laravel-skill">
+                        <!-- skills-scroll__item skills-scroll__item--laravel -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-laravel" alt="" src="assets/images/icons/laravel.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--laravel -->
+                        </div>
+                        <p class="skills-scroll-name">Laravel</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item item-csharp" id="csharp-skill">
+                        <!-- skills-scroll__item skills-scroll__item--csharp -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-csharp" alt="" src="assets/images/icons/csharp.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--csharp -->
+                        </div>
+                        <p class="skills-scroll-name">C#</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-css" alt="" src="assets/images/icons/css.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--css -->
+                        </div>
+                        <p class="skills-scroll-name">CSS</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-html5" alt="" src="assets/images/icons/html5.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--html5 -->
+                        </div>
+                        <p class="skills-scroll-name">HTML5</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-java" alt="" src="assets/images/icons/java.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--java -->
+                        </div>
+                        <p class="skills-scroll-name">Java</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item"> <!-- skills-scroll__item -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-javascript" alt="" src="assets/images/icons/javascript.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--javascript -->
+                        </div>
+                        <p class="skills-scroll-name">Javascript</p> <!-- skills-scroll__name -->
+                    </li>
+                    
+                    <li class="skills-scroll-item "> <!-- skills-scroll__item last-skill -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-php" alt="" src="assets/images/icons/php.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--php -->
+                        </div>
+                        <p class="skills-scroll-name">PHP</p> <!-- skills-scroll__name -->
+                    </li>
+
+                    <li class="skills-scroll-item last-skill"> <!-- skills-scroll__item last-skill -->
+                        <div class="image-wrapper"> <!-- skills-scroll__image-wrapper -->
+                            <img class="skills-scroll-logo logo-php" alt="" src="assets/images/icons/python.svg">
+                            <!-- skills-scroll__logo skills-scroll__logo--php -->
+                        </div>
+                        <p class="skills-scroll-name">Python</p> <!-- skills-scroll__name -->
+                    </li>
+                </ul>
+                <img class="icon icon-chevron-up" alt="Imagen de chevron hacia arriba"
+                    src="assets/images/icons/chevron-up.svg" height="2rem" width="2rem"> <!-- icon chevron-up__icon -->
+            </div>
+            <article class="projects-list">
+                <!-- <img class="icon chevron-down__icon" alt="Imagen de chevron hacia abajo" src="./images/icons/chevron-down.svg" height="1.5rem" width="1.5rem"> -->
+                <div class="project-card">
+                    <img class="card-placeholder" alt="" src="assets/images/cap/laravelCap.png"></img>
+                    <!-- card-placeholder -->
+                    <div class="card-info-container"> <!-- project-card__info-container -->
+                        <h5 class="card-title">Proyecto Laravel</h5><!-- 3rem --> <!-- project-card__title -->
+                        <p class="card-description"><!-- 12rem --> <!-- project__description -->
+                            Se trata de un proyecto ideado para la gestión de un pequeño matadero.
+                            Incluye un CRUD y el diseño front-end de la página de la empresa.
+                        </p>
+                        <div class="card-skill-list"><!-- 3rem --> <!-- project-card__skills -->
+                            <p class="card-skill card-skill-laravel">Laravel</p>
+                            <!-- project-card__skill project-card__skill--laravel -->
+                            <p class="card-skill">HTML5</p> <!-- project-card__skill -->
+                            <p class="card-skill">CSS</p> <!-- project-card__skill -->
+                            <p class="card-skill">Javascript</p> <!-- project-card__skill -->
+                            <p class="card-skill card-skill-bootstrap">Bootstrap</p>
+                            <!-- project-card__skill project-card__skill--bootstrap -->
+                        </div>
+                        <div class="card-link"> <!-- project-card__link -->
+                            <a class="card-anchor" href="https://github.com/ajaragon/proyectoAragon">ProyectoAragon</a>
+                            <!-- project-card__anchor -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <!-- <img class="project-card__image"> -->
+                    <img class="card-placeholder" alt="" src="assets/images/cap/netCap.png"></img>
+                    <!-- project-card__placeholder -->
+                    <div class="card-info-container"> <!-- project-card__info-container -->
+                        <h5 class="card-title">Proyecto .NET</h5> <!-- project-card__title -->
+                        <p class="card-description"> <!-- project__description -->
+                            Se trata de un proyecto de un sitio web de música.
+                            Se trabaja con un "swagger" y una API para gestionar diferentes tablas y datos de bandas,
+                            solistas, canciones, etc.
+                        </p>
+                        <div class="card-skill-list"> <!-- project-card__skills -->
+                            <p class="card-skill">HTML</p> <!-- project-card__skill -->
+                            <p class="card-skill">CSS</p> <!-- project-card__skill -->
+                            <p class="card-skill">Javascript</p> <!-- project-card__skill -->
+                            <p class="card-skill card-skill-csharp">C#</p>
+                            <!-- project-card__skill project-card__skill--csharp -->
+                        </div>
+                        <div class="card-link"> <!-- project-card__link -->
+                            <a class="card-anchor" href="https://github.com/aragonaj/CinemaApi">CinemaApi</a>
+                            <!-- project-card__anchor -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img class="card-placeholder" alt="" src="assets/images/cap/libreriaPiramideCap.png"></img>
+                    <!-- project-card__placeholder -->
+                    <div class="card-info-container"> <!-- project-card__info-container -->
+                        <h5 class="card-title">Proyecto Vainilla</h5> <!-- project-card__title -->
+                        <p class="card-description"> <!-- project__description -->
+                            Se trata de un proyecto de front-end puro, donde se muestra el sitio web de una librería.
+                        </p>
+                        <div class="card-skill-list"> <!-- project-card__skills -->
+                            <p class="card-skill">HTML</p> <!-- project-card__skill -->
+                            <p class="card-skill">CSS</p> <!-- project-card__skill -->
+                            <p class="card-skill">Javascript</p> <!-- project-card__skill -->
+                        </div>
+                        <div class="card-link"> <!-- project-card__link -->
+                            <a class="card-anchor" href="https://aragonaj.github.io/LibreriaPiramide/">Librería
+                                Pirámide</a> <!-- project-card__anchor -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img class="card-placeholder" alt="" src="assets/images/cap/solitarioCap.png"></img>
+                    <!-- project-card__placeholder -->
+                    <div class="card-info-container"> <!-- project-card__info-container -->
+                        <h5 class="card-title">Proyecto Juego del Solitario</h5> <!-- project-card__title -->
+                        <p class="card-description"> <!-- project__description -->
+                            Se trata de un proyecto del juego de cartas del solitario.
+                        </p>
+                        <div class="card-skill-list"> <!-- project-card__skills -->
+                            <p class="card-skill">HTML</p> <!-- project-card__skill -->
+                            <p class="card-skill">CSS</p> <!-- project-card__skill -->
+                            <p class="card-skill">Javascript</p> <!-- project-card__skill -->
+                        </div>
+                        <div class="card-link"> <!-- project-card__link -->
+                            <a class="card-anchor" href="https://aragonaj.github.io/Solitario/">Solitario</a>
+                            <!-- project-card__anchor -->
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="section section-contact" id="section-contact" data-section="section-contact">
+            <div class="container-contact__text">
+                <h3>¡Vamos a hablar! Estoy abierto a nuevas oportunidades</h3>
+                <p>¡Contacta conmigo a través de mis redes sociales!</p><!-- LinkedIn -->
+                <p>¡Envíame un correo!</p><!--Correo Proton -->
+            </div>
+            <div class="container-contact__ref">
+                <hr class="divider__lateral">
+
+                <!-- linkedIn-->
+                <a class="link linkedin-link" href="https://www.linkedin.com/in/ajaragon/">
+                    <img class="social-media__icon social-media__icon-inkedin" src="assets/images/icons/linkedin.svg"
+                        alt="Imagen del logo de LinkedIn" height="2.75rem" width="2.75rem">
+                </a>
+
+                <hr class="divider__middle">
+
+                <!-- Github -->
+                <a class="link github-link" href="https://github.com/aragonaj">
+                    <img class="social-media__icon social-media__icon-github" src="assets/images/icons/github.svg"
+                        alt="Imagen del logo de GitHub" height="2.75rem" width="2.75rem">
+                </a>
+
+                <hr class="divider__middle">
+
+                <!-- Email -->
+                <a class="link email-link"
+                    href="mailto:ajaragon@proton.me?subject=&body=Hola soy Andrés,%0D%0A%0D%0AMe encuentro buscando nuevas oportunidades laborales y estaría encantado de conversar sobre cómo podría aportar valor a tu empresa.%0D%0A%0D%0AGracias por tu tiempo.%0D%0A%0D%0AUn cordial saludo,%0D%0AAndrés.">
+                    <img class="social-media__icon social-media__icon-linkedin"
+                        src="assets/images/icons/proton-mail.svg" alt="Imagen del logo de LinkedIn" height="2.75rem"
+                        width="2.75rem">
+                </a>
+                <hr class="divider__lateral">
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+</body>
+<script src="/script.js"></script>
+
+</html>
+<!-- https://pagespeed.web.dev/analysis/https-aragonaj-github-io-LibreriaPiramide/kmbqkk29qg?form_factor=mobile -->
