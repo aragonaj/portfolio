@@ -383,10 +383,11 @@ html {
     color: var(--secondaryColor);
 }
 
-/* --------------------------------------------------------------------------- */
-/* ---------- BOTÓN ---------------------------------------------------------- */
+/* botón de descarga */
 .button {
     font-family: 'Raleway';
+    src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+    font-weight: 700;
 }
 
 .button--swipe-left {
