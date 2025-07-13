@@ -785,22 +785,6 @@ html {
     cursor: pointer;
 }
 
-/* hover */
-.item-bootstrap:hover {
-    box-shadow: inset 0px 0px 3px 1px var(--color-terciario);
-    opacity: 0.50;
-}
-
-.item-laravel:hover {
-    box-shadow: inset 0px 0px 3px 1px var(--color-terciario);
-    opacity: 0.50;
-}
-
-.item-csharp:hover {
-    box-shadow: inset 0px 0px 3px 1px var(--color-terciario);
-    opacity: 0.50;
-}
-
 @media (max-width: 1350px) {
 
     /* aplicación de fuentes */
