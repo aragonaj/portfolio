@@ -1,48 +1,81 @@
-const cards = document.getElementsByClassName('project-card');
+// Lógica de mostrar los proyectos según los lenguajes empleados
 
-// Habilidades
-const bootstrapSkill = document.getElementById('bootstrap-skill');
-const laravelSkill = document.getElementById('laravel-skill');
-const csharpSkill = document.getElementById('csharp-skill');
+// Accede a todos los lenguajes
+const skillItems = document.querySelectorAll('.skills-scroll-item');
 
-function hideCardsBootstrap(){
-    for (let card of cards) {
-        if (card.getElementsByClassName('card-skill-bootstrap').length === 0) {
-            card.style.display = "none";
+// Accede a los proyectos
+const projectCards = document.querySelectorAll('.project-card');
+
+// Declara que no hay lenguajes seleccionados por el usuario
+let activeSkill = null;
+
+// Declara si se ha seleccionado un lenguaje mediante click
+// Nota: también un usuario puede seleccionar un lenguaje si pasa el ratón por encima; 
+// no obstante, en ese caso al proyecto/s no se podrá acceder 
+let filterLockedByClick = false;
+
+skillItems.forEach(item => {
+    const skillName = item.querySelector('.skills-scroll-name').textContent.trim();
+
+    // Se está pendiente de si el usuario a clickado sobre un lenguaje
+    // En ese caso bloqueará los "hover" y mostrará los proyectos donde se empleó el lenguaje
+    // Para ello, comparará el contenido del texto del item de la lista de lenguajes 
+    // con el contenido del "card-skill"
+    item.addEventListener('click', () => {
+        const clickedSkill = skillName;
+
+        activeSkill = clickedSkill;
+        filterLockedByClick = true;
+
+        projectCards.forEach(card => {
+            const skillsInCard = Array.from(card.querySelectorAll('.card-skill')).map(skill => skill.textContent.trim());
+            if (skillsInCard.includes(clickedSkill)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // esperará 300 milisegundos a que se haga la selección de los proyectos
+        // y situará aquellos relacionados arriba del contenedor padre de la lista
+        setTimeout(() => {
+            const firstVisible = document.querySelector('.project-card:not(.hidden)');
+            if (firstVisible) {
+                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    });
+
+    // mostrará los proyectos relacionados con el lenguaje por el que se haya pasado por encima el cursor
+    item.addEventListener('mouseenter', () => {
+        if (filterLockedByClick) return;
+
+        projectCards.forEach(card => {
+            const cardSkills = Array.from(card.querySelectorAll('.card-skill')).map(skill => skill.textContent.trim());
+            if (cardSkills.includes(skillName)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        setTimeout(() => {
+            const firstVisible = document.querySelector('.project-card:not(.hidden)');
+            if (firstVisible) {
+                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    });
+
+    // cuando el usuario deje de pasar el cursor por encima del item del lenguaje,
+    // le eliminará el estilo "hidden" al elemento seleccionado
+    item.addEventListener('mouseleave', () => {
+        if (!activeSkill) {
+            projectCards.forEach(card => card.classList.remove('hidden'));
         }
-    }
-}
-
-function hideCardsLaravel(){
-    for (let card of cards) {
-        if (card.getElementsByClassName('card-skill-laravel').length === 0) {
-            card.style.display = "none";
-        }
-    }
-}
-
-function hideCardsCSharp(){
-    for (let card of cards) {
-        if (card.getElementsByClassName('card-skill-csharp').length === 0) {
-            card.style.display = "none";
-        }
-    }
-}
-
-function showAll(){
-    for (let card of cards) {
-        card.style.display = "flex";  
-    }
-}
-
-bootstrapSkill.addEventListener('mouseover', hideCardsBootstrap);
-bootstrapSkill.addEventListener('mouseleave', showAll);
-
-laravelSkill.addEventListener('mouseover', hideCardsLaravel);
-laravelSkill.addEventListener('mouseleave', showAll);
-
-csharpSkill.addEventListener('mouseover', hideCardsCSharp);
-csharpSkill.addEventListener('mouseleave', showAll);
+        filterLockedByClick = false;
+    });
+});
 
 // 
 const profileSection = document.querySelector('.section-profile');

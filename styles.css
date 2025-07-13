@@ -535,12 +535,20 @@ html {
 
     cursor: pointer;
 
-    transition: all .6s ease;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .project-card:hover {
     box-shadow: 5px 5px 7px rgb(34, 34, 34, .5);
     transform: scale(1.02);
+}
+
+.project-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none; /* Evita clics en elementos invisibles */
 }
 
 .card-placeholder {
