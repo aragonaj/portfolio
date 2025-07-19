@@ -1,5 +1,34 @@
-// Lógica de mostrar los proyectos según los lenguajes empleados
+// Lógica del tema oscuro
+let darkMode = localStorage.getItem('darkMode');
 
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+    // añade la clase darkMode al body
+    document.body.classList.add('darkmode');
+
+    // actualiza el darkMode en el almacenamiento local del navegador
+    localStorage.setItem("darkMode", "enabled");
+}
+
+const disableDarkMode = () => {
+    // elimina la clase darkMode al body
+    document.body.classList.remove('darkmode');
+
+    // actualiza el darkMode en el almacenamiento local del navegador
+    localStorage.setItem("darkMode", null);
+}
+
+darkModeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem('darkMode');
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
+
+// Lógica de mostrar los proyectos según los lenguajes empleados
 // Accede a todos los lenguajes
 const skillItems = document.querySelectorAll('.skills-scroll-item');
 

@@ -143,6 +143,29 @@ html {
     align-items: center;
 }
 
+/* dark theme */
+.darkmode {
+    --primaryColor: #DCE6F5;
+    --secondaryColor: #C9D7E3;
+    --accentColor: #FF6B81;
+    --backgroundColor: #121212;
+    --textColor: #F5F5F5;
+
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    padding: .25rem;
+
+    height: 2rem;
+    width: 2rem;
+
+    /* border: none; */
+    border-radius: 50% 50%;
+}
+
 /* vista móvil */
 .menu-toggle-label .icon {
     height: 30px;
@@ -927,6 +950,11 @@ html {
     }
 
     /* elementos que no se muestran en pantallas más pequeñas */
+        /* dark theme toggle */
+    .dark-mode-toggle {
+        display: none;
+    }
+
     .site-header .profile__title {
         display: none;
     }
